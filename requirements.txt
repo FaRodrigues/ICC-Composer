@@ -1,5 +1,4 @@
 astropy==5.2.2
-ContextData==0.2.1
 docx==0.2.4
 docxtpl==0.20.1
 matplotlib==3.7.5
