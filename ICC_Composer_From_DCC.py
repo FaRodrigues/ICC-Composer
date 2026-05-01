@@ -213,7 +213,7 @@ circTYear = 0
 if mesBaseNum > 1:
     circTYear = anoRef
 
-docpath = os.path.join("./docs", "MOD-Dimci-1_14_template_lab.docx")
+docpath = os.path.join("templates", "MOD-Dimci-1_14_template_lab.docx")
 doc = DocxTemplate(docpath)
 doccontext = {}
 

@@ -66,8 +66,8 @@ def saveVerticalBarGraphImage(utcrDataparam, limit):
                      fontsize=9)
     plt.ylabel('MJD', fontsize=12)
     plt.xlabel('UTCR - UTC(INXE) (ns)', fontsize=12)
-    plt.savefig('templates/verticalbarchartimage.png', format='png', bbox_inches='tight')
-    plt.savefig('templates/verticalbarchartimage.svg', format='svg', bbox_inches='tight')
+    plt.savefig('images/verticalbarchartimage.png', format='png', bbox_inches='tight')
+    plt.savefig('images/verticalbarchartimage.svg', format='svg', bbox_inches='tight')
 
 
 def saveHorizontalBarGraphImage(utcrDataparam, nominal_limit, process_limit):
@@ -112,8 +112,8 @@ def saveHorizontalBarGraphImage(utcrDataparam, nominal_limit, process_limit):
     plt.xlabel('MJD', fontfamily='Arial', fontsize=12, labelpad=10)
     plt.ylabel('UTCR - UTC(INXE) (ns)', fontfamily='Arial', fontsize=12)
     # plt.title('ABCDEF', fontsize=20)
-    plt.savefig('templates/horizontalbarchartimage.png', format='png', bbox_inches='tight')
-    plt.savefig('templates/horizontalbarchartimage.svg', format='svg', bbox_inches='tight')
+    plt.savefig('images/horizontalbarchartimage.png', format='png', bbox_inches='tight')
+    plt.savefig('images/horizontalbarchartimage.svg', format='svg', bbox_inches='tight')
 
 
 def getCircTDates(mesrefparam):
@@ -213,7 +213,7 @@ circTYear = 0
 if mesBaseNum > 1:
     circTYear = anoRef
 
-docpath = os.path.join("./docs", "MOD-Dimci-1_14_template_lab.docx")
+docpath = os.path.join("templates", "MOD-Dimci-1_14_template_lab.docx")
 doc = DocxTemplate(docpath)
 doccontext = {}
 
@@ -404,8 +404,8 @@ results_context = {
 saveHorizontalBarGraphImage(utcrData, int(results_context['difereMarginNominal']),
                             int(results_context['difereMarginProcess']))
 
-image_context = {'barchartimage': InlineImage(doc, 'templates/horizontalbarchartimage.png', width=Mm(165))}
-# image_context = {'barchartimage': InlineImage(doc, 'templates/verticalbarchartimage.png', width=Mm(120))}
+image_context = {'barchartimage': InlineImage(doc, 'images/horizontalbarchartimage.png', width=Mm(165))}
+# image_context = {'barchartimage': InlineImage(doc, 'images/verticalbarchartimage.png', width=Mm(120))}
 
 measurementResults_context = {}
 
