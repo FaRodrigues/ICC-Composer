@@ -32,7 +32,7 @@ class UserInterfaceCertificado(QMainWindow):
         self.HROGWidget = None
 
         loader = QUiLoader()
-        guipath = os.path.abspath(os.path.join(".", "gui", "ui", "mainwindowCert.ui"))
+        guipath = os.path.abspath(os.path.join(".", "gui", "ui", "mainwindowCertEn.ui"))
         file = QFile(guipath)
         file.open(QFile.ReadOnly)
         self.mainwindow = loader.load(file, self.window())
